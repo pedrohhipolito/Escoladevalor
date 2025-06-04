@@ -122,7 +122,7 @@ function initDownloadButtons() {
             }, 1000);
             
             // Show success message
-            showNotification('Material será enviado por email!', 'success');
+            showNotification('Continue a solicitação enviando a mensagem pelo WhatsApp.', 'success');
         });
     });
 }
