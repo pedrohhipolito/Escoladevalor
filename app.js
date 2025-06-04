@@ -92,39 +92,42 @@ function initScrollAnimations() {
 
 // Download button interactions - Fixed timing issue
 function initDownloadButtons() {
-    const downloadButtons = document.querySelectorAll('.btn-download');
-    
-    downloadButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Prevent multiple clicks
-            if (this.disabled) return;
-            
-            // Add loading state
-            const originalText = this.textContent;
-            this.textContent = 'Preparando...';
-            this.disabled = true;
-            this.style.opacity = '0.7';
-            
-            // Simulate download process
-            setTimeout(() => {
-                this.textContent = 'Baixado!';
-                this.style.background = '#9bb1c1';
-                this.style.opacity = '1';
-                
-                setTimeout(() => {
-                    this.textContent = originalText;
-                    this.disabled = false;
-                    this.style.background = '';
-                    this.style.opacity = '1';
-                }, 2000);
-            }, 1000);
-            
-            // Show success message
-            showNotification('Continue a solicitação enviando a mensagem pelo WhatsApp.', 'success');
-        });
+  const downloadButtons = document.querySelectorAll('.btn-download');
+
+  downloadButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      // Se o botão NÃO tiver href (ou seja, for <button>), bloqueia e executa animação
+      if (!this.href) {
+        e.preventDefault();
+
+        // Add loading state
+        const originalText = this.textContent;
+        this.textContent = 'Preparando...';
+        this.disabled = true;
+        this.style.opacity = '0.7';
+
+        setTimeout(() => {
+          this.textContent = 'Enviando!';
+          this.style.background = '#9bb1c1';
+          this.style.opacity = '1';
+
+          setTimeout(() => {
+            this.textContent = originalText;
+            this.disabled = false;
+            this.style.background = '';
+            this.style.opacity = '1';
+          }, 2000);
+        }, 1000);
+
+        // Mensagem de sucesso para downloads simulados
+        showNotification('Material será enviado por email.', 'success');
+      } else {
+        // Para links com href (como WhatsApp), mostra notificação mas deixa seguir normalmente
+        showNotification('Continue a solicitação enviando a mensagem pelo WhatsApp.', 'success');
+        // Não impede o clique, não mexe no texto
+      }
     });
+  });
 }
 
 // Product card hover effects
