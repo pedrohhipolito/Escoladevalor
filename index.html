@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola de Valor - Educação Financeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Escola de Valor</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                <li><a href="#conteudos" class="nav-link">Conteúdos Gratuitos</a></li>
+                <li><a href="#valores" class="nav-link">Valores</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Escola de Valor</h1>
+                <p class="hero-subtitle">Prover perspectiva de prosperidade com determinação, trabalho e fé</p>
+                <blockquote class="hero-manifesto">
+                    "O dinheiro não é um fim, mas uma ferramenta para prover o que realmente importa"
+                </blockquote>
+                <div class="hero-cta">
+                    <button class="btn-primary" onclick="scrollToSection('produtos')">Conheça Nossos Produtos</button>
+                    <button class="btn-secondary" onclick="scrollToSection('conteudos')">Materiais Gratuitos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre a Escola de Valor</h2>
+            
+            <div class="founder-section">
+                <h3>Pedro Hipólito - Fundador</h3>
+                <p class="founder-description">
+                    Um cara comum que ganhava bem, mas via o dinheiro sumir sem perceber. Um dia, entendi: só existe um responsável pela minha vida financeira - eu mesmo. Por isso, criei a Escola de Valor, pra mostrar que dinheiro não é fim, é ferramenta pra prover o que realmente importa.
+                </p>
+                <p class="founder-bio">
+                    Servidor público e criador da Escola de Valor. Aprendi que os resultados da vida dependem de esforço e responsabilidade. Com mais de 7 anos de experiência em educação financeira, criei esta plataforma para tornar o aprendizado acessível, honesto e eficiente.
+                </p>
+            </div>
+
+            <div class="company-info">
+                <div class="info-card">
+                    <h4>Missão</h4>
+                    <p>Prover perspectiva de prosperidade com determinação, trabalho e fé através de educação financeira de alta qualidade, baseada em princípios sólidos e visão de longo prazo, incentivando a independência financeira, a proteção da família e a construção de hábitos que geram prosperidade.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Visão</h4>
+                    <p>Ser referência em educação financeira e desenvolvimento pessoal, capacitando pessoas a assumirem o controle das próprias finanças e a construírem um futuro seguro e próspero, fundamentado em hábitos saudáveis e valores sólidos.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Propósito</h4>
+                    <p>O propósito da Escola de Valor é despertar o senso de responsabilidade financeira em cada indivíduo e, com disciplina, esforço e conhecimento validado, ensinar o caminho para um futuro seguro e próspero responsabilidade que só cabe a você.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section id="produtos" class="section products-section">
+        <div class="container">
+            <h2 class="section-title">Jornada de Produtos</h2>
+            <p class="section-subtitle">Sua evolução na educação financeira</p>
+            
+            <div class="products-journey">
+                <div class="product-card" data-level="iniciante">
+                    <div class="product-badge">Iniciante</div>
+                    <h3>Curso Expresso</h3>
+                    <p class="product-description">Curso básico introdutório para quem está começando na jornada da educação financeira</p>
+                    <div class="product-objective">Fundamentos essenciais</div>
+                </div>
+                
+                <div class="journey-arrow">→</div>
+                
+                <div class="product-card" data-level="intermediario">
+                    <div class="product-badge">Intermediário</div>
+                    <h3>Acesso Total</h3>
+                    <p class="product-description">Plataforma completa de educação financeira com conteúdo abrangente e estruturado</p>
+                    <div class="product-objective">Conhecimento completo</div>
+                </div>
+                
+                <div class="journey-arrow">→</div>
+                
+                <div class="product-card" data-level="avancado">
+                    <div class="product-badge">Avançado</div>
+                    <h3>Mentoria em Grupo</h3>
+                    <p class="product-description">Acompanhamento coletivo com sessões de mentoria e discussões em grupo</p>
+                    <div class="product-objective">Acompanhamento prático</div>
+                </div>
+                
+                <div class="journey-arrow">→</div>
+                
+                <div class="product-card" data-level="premium">
+                    <div class="product-badge">Premium</div>
+                    <h3>Consultoria Individual</h3>
+                    <p class="product-description">Atendimento personalizado e consultoria financeira individual</p>
+                    <div class="product-objective">Solução personalizada</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdos Gratuitos Section -->
+    <section id="conteudos" class="section free-content-section">
+        <div class="container">
+            <h2 class="section-title">Conteúdos Gratuitos</h2>
+            <p class="section-subtitle">Comece sua jornada agora mesmo</p>
+            
+            <div class="free-content-grid">
+                <div class="content-card">
+                    <div class="content-icon">📖</div>
+                    <h3>Ebook: Guia Básico de Investimentos</h3>
+                    <p>Fundamentos essenciais para começar a investir com segurança</p>
+                    <button class="btn-download">Baixar Ebook</button>
+                </div>
+                
+                <div class="content-card">
+                    <div class="content-icon">💡</div>
+                    <h3>Ebook: 10 Sacadas para mudar sua vida financeira</h3>
+                    <p>Dicas práticas para transformar sua relação com o dinheiro</p>
+                    <button class="btn-download">Baixar Ebook</button>
+                </div>
+                
+                <div class="content-card">
+                    <div class="content-icon">📊</div>
+                    <h3>Planilhas Financeiras</h3>
+                    <p>Conjunto de planilhas para parcelamento, projeção de patrimônio, dividendos e conversão de juros</p>
+                    <button class="btn-download">Baixar Planilhas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores Section -->
+    <section id="valores" class="section values-section">
+        <div class="container">
+            <h2 class="section-title">Nossos Valores</h2>
+            <p class="section-subtitle">Os princípios que guiam nossa missão</p>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <h4>Disciplina e Esforço</h4>
+                    <p>Acreditar que o sucesso financeiro é alcançado através da dedicação e persistência.</p>
+                </div>
+                <div class="value-card">
+                    <h4>Visão de Longo Prazo</h4>
+                    <p>Focar em estratégias que visam a construção de um futuro sólido e sustentável, buscando ativos de valor.</p>
+                </div>
+                <div class="value-card">
+                    <h4>Autossuficiência Financeira</h4>
+                    <p>Ensinar a importância de ser independente financeiramente e não depender do Estado ou de terceiros para garantir o futuro.</p>
+                </div>
+                <div class="value-card">
+                    <h4>Família</h4>
+                    <p>Prover a proteção e o bem-estar da família como um dos principais objetivos da educação financeira.</p>
+                </div>
+                <div class="value-card">
+                    <h4>Sabedoria e Conhecimento</h4>
+                    <p>Basear os ensinamentos nas lições de investidores experientes e na sabedoria bíblica.</p>
+                </div>
+                <div class="value-card">
+                    <h4>Comunidade</h4>
+                    <p>Promover um ambiente onde os membros se ajudam e se fortalecem mutuamente.</p>
+                </div>
+                <div class="value-card">
+                    <h4>Genuíno Interesse</h4>
+                    <p>Agimos sempre com transparência, lealdade e um interesse sincero pela evolução dos alunos.</p>
+                </div>
+                <div class="value-card">
+                    <h4>Inteligência e Simplicidade</h4>
+                    <p>Buscamos eficiência máxima, concentrando esforços no que realmente gera resultado prático.</p>
+                </div>
+                <div class="value-card">
+                    <h4>Energia Alta</h4>
+                    <p>Não aceitamos a inércia - atitude, movimento e força de vontade para vencer a preguiça.</p>
+                </div>
+                <div class="value-card">
+                    <h4>Otimismo</h4>
+                    <p>Trabalhamos como se tudo dependesse de nós, confiando como se tudo dependesse de Deus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Pronto para transformar sua vida financeira?</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Fale Conosco</h3>
+                    <p>Estamos aqui para ajudar você a dar o primeiro passo rumo à independência financeira.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <strong>Email:</strong> contato@escoladevalor.com.br
+                        </div>
+                        <div class="contact-method">
+                            <strong>WhatsApp:</strong> (11) 99999-9999
+                        </div>
+                        <div class="contact-method">
+                            <strong>Instagram:</strong> @escoladevalor
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <h3>Comece Agora</h3>
+                    <p>Escolha como deseja iniciar sua jornada:</p>
+                    <div class="cta-buttons">
+                        <button class="btn-primary" onclick="scrollToSection('conteudos')">Materiais Gratuitos</button>
+                        <button class="btn-secondary" onclick="scrollToSection('produtos')">Conhecer Produtos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Escola de Valor</h3>
+                    <p>Prover perspectiva de prosperidade com determinação, trabalho e fé</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#produtos">Produtos</a>
+                    <a href="#conteudos">Conteúdos Gratuitos</a>
+                    <a href="#valores">Valores</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Escola de Valor. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
