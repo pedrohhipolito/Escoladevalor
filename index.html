@@ -103,45 +103,87 @@
             margin-top: 0;
             font-size: 1.6rem;
         }
+
+        .intro-text p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #34495e;
+            line-height: 1.6;
+        }
+        .intro-text p strong {
+             display: block;
+             margin-top: 1rem;
+        }
+
         .topics-list { list-style: none; padding: 0; margin: 0; }
         .topics-list li { padding: 12px 0 12px 35px; position: relative; font-size: 1.05rem; border-bottom: 1px dashed #eee; line-height: 1.5; }
         .topics-list li:last-child { border-bottom: none; }
         .topics-list li::before { content: '✔'; position: absolute; left: 0; top: 12px; color: #27ae60; font-weight: bold; font-size: 1.2rem; }
 
         /* Estilos para a lista de módulos do Acesso Total */
-        .module-list .module-item {
-            padding: 15px 0;
-            border-bottom: 1px dashed #eee;
+        .feature-list li {
+            padding-left: 40px;
         }
-        .module-list .module-item:last-child {
-            border-bottom: none;
+        .feature-list li::before {
+            content: '🔹';
+            color: #3498db;
+            font-size: 1.5rem;
+            top: 10px;
         }
-        .module-list h4 {
+        .feature-list p {
+            margin: 0;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .feature-list h4 {
             font-family: 'Inter', sans-serif;
             font-weight: 700;
             font-size: 1.1rem;
             color: #34495e;
             margin: 0 0 5px 0;
         }
-        .module-list p {
-            margin: 0;
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.6;
-        }
         
         .cta-section { text-align: center; padding: 30px; background-color: #f1f5f9; border-radius: 12px; }
         .cta-section h2 { font-family: 'Playfair Display', serif; color: #34495e; border: none; margin-bottom: 15px; font-size: 1.5rem; }
-        .price { font-size: 2.8rem; font-weight: 700; margin-bottom: 5px; color: #e67e22; }
-        .price-details { font-size: 1rem; margin-bottom: 25px; color: #555; }
-        .final-quote {
-            margin-top: 30px;
-            font-style: italic;
-            color: #34495e;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+        .price { font-size: 2.2rem; font-weight: 700; margin-bottom: 5px; color: #7f8c8d; }
+        
+        .price-installment {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #e67e22;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 10px;
+            border: 2px solid #e67e22;
         }
+
+        .price-details { font-size: 1rem; margin-bottom: 25px; color: #555; }
+        
+        .final-points {
+            margin-top: 30px;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        .final-points li {
+            color: #34495e;
+            font-weight: 500;
+            font-size: 1.05rem;
+            padding: 8px 0 8px 30px;
+            position: relative;
+            display: inline-block;
+            text-align: left;
+        }
+        .final-points li::before {
+            content: '📌';
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+
         .btn-buy { font-family: 'Inter', sans-serif; background-color: #e67e22; color: #fff; text-decoration: none; padding: 15px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: 700; transition: background-color 0.3s ease, transform 0.3s ease; display: inline-block; border: none; cursor: pointer; }
         .btn-buy:hover { background-color: #d35400; transform: translateY(-3px); }
 
@@ -390,66 +432,71 @@
                     <h2>Acesso Imediato por Apenas</h2>
                     <div class="price">R$ 97,00</div>
                     <p class="price-details">Pagamento único. Acesso vitalício.</p>
-                    <a href="https://pay.kiwify.com.br/6qsQt31" class="btn-buy" target="_blank">Quero Organizar Minhas Finanças Agora</a>
+                    <a href="https://pay.kiwify.com.br/sDOEerZ" class="btn-buy" target="_blank">Quero Organizar Minhas Finanças Agora</a>
                 </section>
             </main>
         </div>
     </div>
 
-    <!-- === HTML DO MODAL DO ACESSO TOTAL === -->
+    <!-- === HTML DO MODAL DO ACESSO TOTAL (ATUALIZADO) === -->
     <div class="modal-overlay" id="acesso-total-modal">
         <div class="modal-container">
             <button class="modal-close" id="close-acesso-total">&times;</button>
             <header class="curso-header">
                 <h1>Escola de Valor – Acesso Total</h1>
-                <p class="subtitle">A plataforma completa para quem leva a liberdade financeira a sério.</p>
+                <p class="subtitle">Para quem entendeu que liberdade financeira não se improvisa — se constrói.</p>
             </header>
             <main class="product-content">
-                <section class="product-section">
-                    <h2>O que você vai encontrar?</h2>
-                    <div class="module-list">
-                        <div class="module-item">
-                            <h4>Módulo: Arrumando a Casa</h4>
-                            <p>Organize suas finanças com clareza e crie uma rotina financeira eficiente com planilhas, apps, metas realistas e hábitos que funcionam.</p>
-                        </div>
-                        <div class="module-item">
-                            <h4>Módulo: Mentalidade Investidora</h4>
-                            <p>Construa uma nova forma de pensar sobre dinheiro, entendendo por que ele é ferramenta — não fim — e como isso muda tudo.</p>
-                        </div>
-                        <div class="module-item">
-                            <h4>Módulo: Proteja seu Patrimônio</h4>
-                            <p>Aprenda a se defender da inflação, do câmbio, do Estado e até de você mesmo. Educação financeira é proteção.</p>
-                        </div>
-                        <div class="module-item">
-                            <h4>Módulo: Renda Fixa</h4>
-                            <p>Tudo sobre Tesouro Direto, CDB, Selic, FGC, impostos, taxas, reserva de emergência e produtos bancários — da base ao avançado.</p>
-                        </div>
-                        <div class="module-item">
-                            <h4>Módulo: Renda Variável</h4>
-                            <p>Descubra o mundo das ações, FIIs e ETFs com aulas práticas, didáticas e sem enrolação. Aprenda a declarar, analisar e investir com consciência.</p>
-                        </div>
-                         <div class="module-item">
-                            <h4>Volta Extra</h4>
-                            <p>Aulões especiais, simuladores, planilhas exclusivas, lista de livros e materiais extras que valem ouro.</p>
-                        </div>
-                    </div>
+                <section class="intro-text">
+                     <p>Este não é um curso básico.<br>É uma plataforma completa de transformação financeira.<br>Aqui, você encontra o mapa — e o caminho — para organizar sua vida, proteger o que é seu e investir com clareza, propósito e consistência.
+                     <strong>Não é sobre promessas.<br>É sobre uma escolha: assumir o controle.</strong></p>
                 </section>
                 <section class="product-section">
-                    <h2>Para quem é este acesso?</h2>
+                    <h2>O que você vai acessar:</h2>
+                    <ul class="topics-list feature-list">
+                        <li>
+                            <h4>Mais de 50 aulas práticas e organizadas em trilhas de aprendizagem</h4>
+                            <p>De controle de gastos à renda variável, com linguagem clara, visão de longo prazo e ferramentas reais para aplicar no seu dia a dia.</p>
+                        </li>
+                        <li>
+                            <h4>Planilhas, simuladores e guias exclusivos</h4>
+                            <p>Tudo que você precisa para montar um plano de ação simples, eficaz e adaptado à sua realidade.</p>
+                        </li>
+                        <li>
+                            <h4>Atualizações constantes e novos módulos liberados regularmente</h4>
+                            <p>Sem pagar a mais. Uma assinatura, acesso total. Para quem quer crescer junto com o conteúdo.</p>
+                        </li>
+                        <li>
+                            <h4>Aulas com especialistas e participações especiais</h4>
+                            <p>Experiências práticas, histórias reais e participações que ampliam sua visão de finanças, família e liberdade.</p>
+                        </li>
+                         <li>
+                            <h4>Mentalidade, proteção e multiplicação do patrimônio</h4>
+                            <p>Três pilares. Um só objetivo: fazer do dinheiro um aliado silencioso, não um senhor tirano.</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="product-section">
+                    <h2>Esta assinatura é para você se:</h2>
                     <ul class="topics-list">
-                        <li>Para quem quer sair da corrida dos ratos com método, não com mágica.</li>
-                        <li>Para quem busca proteger sua família e construir prosperidade com os pés no chão.</li>
-                        <li>Para quem prefere conteúdo direto, honesto e prático — sem promessas de dinheiro fácil.</li>
-                        <li>Para quem sabe que liberdade se constrói com disciplina, e não com sorte.</li>
-                        <li>Para quem entende que o maior investimento é em si mesmo.</li>
+                        <li>Está cansado de gastar energia tentando “dar conta” de tudo sem um plano claro.</li>
+                        <li>Já entendeu que não adianta investir sem antes se organizar.</li>
+                        <li>Quer construir, com calma e método, um futuro de verdade para sua família.</li>
+                        <li>Valoriza o aprendizado contínuo e a sabedoria de quem já viveu o que ensina.</li>
+                        <li>Sabe que a verdadeira liberdade não é ostentação — é autonomia com dignidade.</li>
                     </ul>
                 </section>
                 <section class="cta-section">
-                    <h2>Acesso Anual Completo</h2>
-                    <div class="price">R$ 297,00 por ano</div>
-                    <p class="price-details">Pagamento único. Acesso completo a todos os módulos, materiais extras e atualizações.</p>
+                    <h2>Acesso Anual</h2>
+                    <div class="price-installment">12x de R$ 49,54</div>
+                    <div class="price">ou R$ 479,00/ano</div>
+                    <p class="price-details">Pagamento anual. Sem surpresas.<br>Acesso imediato e completo a todos os conteúdos da plataforma.</p>
                     <a href="https://pay.kiwify.com.br/pTS790U" class="btn-buy" target="_blank">Quero Acesso Completo</a>
-                    <p class="final-quote">Não é sobre enriquecer da noite para o dia.<br>É sobre construir, com clareza e consistência, o que realmente importa: sua liberdade, sua família, seu futuro.</p>
+                    <ul class="final-points">
+                        <li>Não oferecemos atalhos.</li>
+                        <li>Oferecemos estrutura, clareza e propósito.</li>
+                        <li>O resto é com você.</li>
+                    </ul>
                 </section>
             </main>
         </div>
