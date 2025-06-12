@@ -107,11 +107,41 @@
         .topics-list li { padding: 12px 0 12px 35px; position: relative; font-size: 1.05rem; border-bottom: 1px dashed #eee; line-height: 1.5; }
         .topics-list li:last-child { border-bottom: none; }
         .topics-list li::before { content: '✔'; position: absolute; left: 0; top: 12px; color: #27ae60; font-weight: bold; font-size: 1.2rem; }
+
+        /* Estilos para a lista de módulos do Acesso Total */
+        .module-list .module-item {
+            padding: 15px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .module-list .module-item:last-child {
+            border-bottom: none;
+        }
+        .module-list h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #34495e;
+            margin: 0 0 5px 0;
+        }
+        .module-list p {
+            margin: 0;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
         
         .cta-section { text-align: center; padding: 30px; background-color: #f1f5f9; border-radius: 12px; }
         .cta-section h2 { font-family: 'Playfair Display', serif; color: #34495e; border: none; margin-bottom: 15px; font-size: 1.5rem; }
         .price { font-size: 2.8rem; font-weight: 700; margin-bottom: 5px; color: #e67e22; }
         .price-details { font-size: 1rem; margin-bottom: 25px; color: #555; }
+        .final-quote {
+            margin-top: 30px;
+            font-style: italic;
+            color: #34495e;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .btn-buy { font-family: 'Inter', sans-serif; background-color: #e67e22; color: #fff; text-decoration: none; padding: 15px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: 700; transition: background-color 0.3s ease, transform 0.3s ease; display: inline-block; border: none; cursor: pointer; }
         .btn-buy:hover { background-color: #d35400; transform: translateY(-3px); }
 
@@ -203,7 +233,7 @@
                     <div class="product-objective">Fundamentos essenciais</div>
                 </div>
                 <div class="journey-arrow">→</div>
-                <div class="product-card" data-level="intermediario">
+                <div class="product-card clickable" data-level="intermediario" id="open-acesso-total">
                     <div class="product-badge">Intermediário</div>
                     <h3>Acesso Total</h3>
                     <p class="product-description">Plataforma completa de educação financeira com conteúdo abrangente e estruturado</p>
@@ -360,14 +390,73 @@
                     <h2>Acesso Imediato por Apenas</h2>
                     <div class="price">R$ 97,00</div>
                     <p class="price-details">Pagamento único. Acesso vitalício.</p>
-                    <a href="#" class="btn-buy">Quero Organizar Minhas Finanças Agora</a>
+                    <a href="https://pay.kiwify.com.br/6qsQt31" class="btn-buy" target="_blank">Quero Organizar Minhas Finanças Agora</a>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- === HTML DO MODAL DO ACESSO TOTAL === -->
+    <div class="modal-overlay" id="acesso-total-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="close-acesso-total">&times;</button>
+            <header class="curso-header">
+                <h1>Escola de Valor – Acesso Total</h1>
+                <p class="subtitle">A plataforma completa para quem leva a liberdade financeira a sério.</p>
+            </header>
+            <main class="product-content">
+                <section class="product-section">
+                    <h2>O que você vai encontrar?</h2>
+                    <div class="module-list">
+                        <div class="module-item">
+                            <h4>Módulo: Arrumando a Casa</h4>
+                            <p>Organize suas finanças com clareza e crie uma rotina financeira eficiente com planilhas, apps, metas realistas e hábitos que funcionam.</p>
+                        </div>
+                        <div class="module-item">
+                            <h4>Módulo: Mentalidade Investidora</h4>
+                            <p>Construa uma nova forma de pensar sobre dinheiro, entendendo por que ele é ferramenta — não fim — e como isso muda tudo.</p>
+                        </div>
+                        <div class="module-item">
+                            <h4>Módulo: Proteja seu Patrimônio</h4>
+                            <p>Aprenda a se defender da inflação, do câmbio, do Estado e até de você mesmo. Educação financeira é proteção.</p>
+                        </div>
+                        <div class="module-item">
+                            <h4>Módulo: Renda Fixa</h4>
+                            <p>Tudo sobre Tesouro Direto, CDB, Selic, FGC, impostos, taxas, reserva de emergência e produtos bancários — da base ao avançado.</p>
+                        </div>
+                        <div class="module-item">
+                            <h4>Módulo: Renda Variável</h4>
+                            <p>Descubra o mundo das ações, FIIs e ETFs com aulas práticas, didáticas e sem enrolação. Aprenda a declarar, analisar e investir com consciência.</p>
+                        </div>
+                         <div class="module-item">
+                            <h4>Volta Extra</h4>
+                            <p>Aulões especiais, simuladores, planilhas exclusivas, lista de livros e materiais extras que valem ouro.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="product-section">
+                    <h2>Para quem é este acesso?</h2>
+                    <ul class="topics-list">
+                        <li>Para quem quer sair da corrida dos ratos com método, não com mágica.</li>
+                        <li>Para quem busca proteger sua família e construir prosperidade com os pés no chão.</li>
+                        <li>Para quem prefere conteúdo direto, honesto e prático — sem promessas de dinheiro fácil.</li>
+                        <li>Para quem sabe que liberdade se constrói com disciplina, e não com sorte.</li>
+                        <li>Para quem entende que o maior investimento é em si mesmo.</li>
+                    </ul>
+                </section>
+                <section class="cta-section">
+                    <h2>Acesso Anual Completo</h2>
+                    <div class="price">R$ 297,00 por ano</div>
+                    <p class="price-details">Pagamento único. Acesso completo a todos os módulos, materiais extras e atualizações.</p>
+                    <a href="https://pay.kiwify.com.br/pTS790U" class="btn-buy" target="_blank">Quero Acesso Completo</a>
+                    <p class="final-quote">Não é sobre enriquecer da noite para o dia.<br>É sobre construir, com clareza e consistência, o que realmente importa: sua liberdade, sua família, seu futuro.</p>
                 </section>
             </main>
         </div>
     </div>
 
     <script src="app.js"></script>
-    <!-- === SCRIPT PARA CONTROLAR O MODAL === -->
+    <!-- === SCRIPT PARA CONTROLAR OS MODAIS === -->
     <script>
         // Função para scroll suave (caso não esteja no seu app.js principal)
         function scrollToSection(sectionId) {
@@ -377,27 +466,38 @@
             }
         }
 
-        // Lógica do Modal
+        // Lógica dos Modais
         document.addEventListener('DOMContentLoaded', () => {
-            const modalOverlay = document.getElementById('curso-expresso-modal');
-            const openButton = document.getElementById('open-curso-expresso');
-            const closeButton = document.getElementById('close-curso-expresso');
+            // Função genérica para controlar um modal
+            const setupModal = (modalId, openBtnId, closeBtnId) => {
+                const modal = document.getElementById(modalId);
+                const openBtn = document.getElementById(openBtnId);
+                const closeBtn = document.getElementById(closeBtnId);
 
-            const openModal = () => modalOverlay && modalOverlay.classList.add('active');
-            const closeModal = () => modalOverlay && modalOverlay.classList.remove('active');
+                if (!modal || !openBtn || !closeBtn) return;
 
-            if (openButton) openButton.addEventListener('click', openModal);
-            if (closeButton) closeButton.addEventListener('click', closeModal);
-            
-            if (modalOverlay) {
-                modalOverlay.addEventListener('click', (event) => {
-                    if (event.target === modalOverlay) closeModal();
+                const open = () => modal.classList.add('active');
+                const close = () => modal.classList.remove('active');
+
+                openBtn.addEventListener('click', open);
+                closeBtn.addEventListener('click', close);
+
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) close();
                 });
-            }
+            };
 
+            // Configura os dois modais
+            setupModal('curso-expresso-modal', 'open-curso-expresso', 'close-curso-expresso');
+            setupModal('acesso-total-modal', 'open-acesso-total', 'close-acesso-total');
+            
+            // Fechar qualquer modal ativo com a tecla 'Esc'
             document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
-                    closeModal();
+                if (event.key === 'Escape') {
+                    const activeModal = document.querySelector('.modal-overlay.active');
+                    if (activeModal) {
+                        activeModal.classList.remove('active');
+                    }
                 }
             });
         });
