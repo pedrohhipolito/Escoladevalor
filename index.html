@@ -13,7 +13,7 @@
     
     <link rel="stylesheet" href="style.css">
 
-    <!-- === ESTILOS PARA O MODAL DO CURSO (ATUALIZADOS) === -->
+    <!-- === ESTILOS PARA O MODAL E NOVOS ELEMENTOS === -->
     <style>
         /* Estilos para o Modal */
         .modal-overlay {
@@ -164,6 +164,19 @@
         .btn-buy:hover { background-color: #d35400; transform: translateY(-3px); }
 
         .product-card.clickable { cursor: pointer; }
+
+        /* Estilo para o botão da comunidade na navegação */
+        .nav-community a {
+            background-color: #25D366;
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .nav-community a:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -183,6 +196,7 @@
                 <li><a href="#conteudos" class="nav-link">Conteúdos Gratuitos</a></li>
                 <li><a href="#valores" class="nav-link">Valores</a></li>
                 <li><a href="#contato" class="nav-link">Contato</a></li>
+                <li class="nav-community"><a href="https://chat.whatsapp.com/FjPGlshFWMRAVnI8M9Fbkz" target="_blank">Comunidade</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span><span></span><span></span>
@@ -335,6 +349,7 @@
                     <div class="contact-methods">
                         <div class="contact-method"><strong>Email:</strong> <a href="mailto:pedrohhipolito@escoladevalor.com.br">pedrohhipolito@escoladevalor.com.br</a></div>
                         <div class="contact-method"><strong>WhatsApp:</strong> <a href="https://wa.me/553131912263" target="_blank">31 3191-2263</a></div>
+                        <div class="contact-method"><strong>Comunidade:</strong> <a href="https://chat.whatsapp.com/FjPGlshFWMRAVnI8M9Fbkz" target="_blank">Entre no grupo do WhatsApp</a></div>
                         <div class="contact-method"><strong>Instagram:</strong> <a href="https://www.instagram.com/escoladevaloroficial" target="_blank">@escoladevaloroficial</a></div>
                     </div>
                 </div>
@@ -374,7 +389,7 @@
         </div>
     </footer>
 
-    <!-- === HTML DO MODAL DO CURSO EXPRESSO (LINK ATUALIZADO) === -->
+    <!-- === HTML DO MODAL DO CURSO EXPRESSO (PREÇO ATUALIZADO) === -->
     <div class="modal-overlay" id="curso-expresso-modal">
         <div class="modal-container">
             <div class="modal-header">
@@ -409,7 +424,8 @@
                     </section>
                     <section class="cta-section">
                         <h2>Acesso Imediato por Apenas</h2>
-                        <div class="price">R$ 97,00</div>
+                        <div class="price-installment">10x de R$ 9,60</div>
+                        <div class="price">ou R$ 79,90 à vista</div>
                         <p class="price-details">Pagamento único. Acesso vitalício.</p>
                         <a href="https://pay.kiwify.com.br/6qsQt31" class="btn-buy" target="_blank">Quero Organizar Minhas Finanças Agora</a>
                     </section>
