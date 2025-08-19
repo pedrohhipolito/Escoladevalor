@@ -761,6 +761,14 @@ h4 {
 .btn-buy { font-family: 'Cormorant Garamond', serif; background: linear-gradient(135deg, #1e2c4c 0%, #9bb1c1 100%); color: #fff; text-decoration: none; padding: 15px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: 600; transition: all 0.3s ease; display: inline-block; border: none; cursor: pointer; }
 .btn-buy:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(30, 44, 76, 0.4); }
 
+.btn-buy[disabled],
+.btn-buy[disabled]:hover {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
 .product-card.clickable { cursor: pointer; }
 
 /* Estilo para o botão da comunidade na navegação */
