@@ -371,6 +371,9 @@ h4 {
 .plan-card.popular {
     border: 2px solid #e9ce8a;
 }
+.plan-card.recommended {
+    border: 2px solid #1e2c4c;
+}
 .plan-badge {
     position: absolute;
     top: -10px;
@@ -412,8 +415,19 @@ h4 {
 .plan-table th,
 .plan-table td {
     border: 1px solid #e9ce8a;
-    padding: 0.5rem;
+    padding: 0.75rem;
     text-align: center;
+}
+.plan-table th {
+    background: #f8f6f0;
+    font-weight: 600;
+}
+.plan-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+.plan-table tbody tr:nth-child(even) {
+    background: #faf8f2;
 }
 .plan-buttons {
     display: flex;
