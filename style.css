@@ -346,6 +346,82 @@ h4 {
     background: rgba(233, 206, 138, 0.05);
 }
 
+/* Planos Section */
+.plans-section {
+    background: rgba(155, 177, 193, 0.05);
+}
+.plans-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.plan-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(30, 44, 76, 0.15);
+    flex: 1;
+    min-width: 260px;
+    max-width: 320px;
+    text-align: center;
+    position: relative;
+}
+.plan-card.popular {
+    border: 2px solid #e9ce8a;
+}
+.plan-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #e9ce8a;
+    color: #1e2c4c;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+.plan-price {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.plan-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+.plan-features li {
+    margin-bottom: 0.5rem;
+}
+.plans-opening {
+    text-align: center;
+    margin-top: 1rem;
+}
+.plan-note {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-align: center;
+}
+.plan-table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+.plan-table th,
+.plan-table td {
+    border: 1px solid #e9ce8a;
+    padding: 0.5rem;
+    text-align: center;
+}
+.plan-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
 .products-journey {
     display: flex;
     align-items: center;
@@ -760,6 +836,19 @@ h4 {
 
 .btn-buy { font-family: 'Cormorant Garamond', serif; background: linear-gradient(135deg, #1e2c4c 0%, #9bb1c1 100%); color: #fff; text-decoration: none; padding: 15px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: 600; transition: all 0.3s ease; display: inline-block; border: none; cursor: pointer; }
 .btn-buy:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(30, 44, 76, 0.4); }
+
+.btn-buy.highlight {
+    background: linear-gradient(135deg, #e9ce8a 0%, #9bb1c1 100%);
+    color: #1e2c4c;
+}
+
+.btn-buy[disabled],
+.btn-buy[disabled]:hover {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
 
 .product-card.clickable { cursor: pointer; }
 
