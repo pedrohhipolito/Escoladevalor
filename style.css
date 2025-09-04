@@ -406,6 +406,11 @@ h4 {
     opacity: 0.8;
     text-align: center;
 }
+.mentoria-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
 .plan-table {
     width: 100%;
     margin-top: 2rem;
