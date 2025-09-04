@@ -557,6 +557,51 @@ h4 {
     margin-bottom: 2rem;
 }
 
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(30, 44, 76, 0.15);
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '“';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 3rem;
+    color: #e9ce8a;
+}
+
+.testimonial-card::after {
+    content: '”';
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-size: 3rem;
+    color: #e9ce8a;
+}
+
+.testimonial-card p {
+    color: #1e2c4c;
+    opacity: 0.9;
+}
+
+.testimonial-author {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-style: normal;
+}
+
 /* Values Section */
 .values-grid {
     display: grid;
