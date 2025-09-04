@@ -411,6 +411,17 @@ h4 {
     font-size: 0.9rem;
     opacity: 0.8;
 }
+.features-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+.feature-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
 .plan-table {
     width: 100%;
     margin-top: 2rem;
