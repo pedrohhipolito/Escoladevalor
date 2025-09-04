@@ -346,120 +346,208 @@ h4 {
     background: rgba(233, 206, 138, 0.05);
 }
 
-.products-journey {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    max-width: 1400px;
-    margin: 0 auto;
+/* Planos Section */
+.plans-section {
+    background: rgba(155, 177, 193, 0.05);
 }
-
-.product-card {
-    background: white;
+.plans-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.plan-card {
+    background: #fff;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 6px 25px rgba(30, 44, 76, 0.15);
     flex: 1;
-    min-width: 250px;
-    max-width: 300px;
+    min-width: 260px;
+    max-width: 320px;
     text-align: center;
-    transition: all 0.3s ease;
     position: relative;
+}
+.plan-card.popular {
+    border: 2px solid #e9ce8a;
+}
+.plan-card.recommended {
+    border: 2px solid #1e2c4c;
+}
+.plan-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #e9ce8a;
+    color: #1e2c4c;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+.plan-price {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.plan-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+.plan-features li {
+    margin-bottom: 0.5rem;
+}
+.plan-note {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-align: center;
+}
+.mentoria-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feature-card {
+    background: #f8f6f0;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(30, 44, 76, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+.highlight-text {
+    color: #e9ce8a;
+    font-weight: 600;
+}
+
+/* Toggle List */
+.toggle-list {
+    max-width: 900px;
+    margin: 2rem auto 0;
+}
+
+.toggle-item {
+    background: #f8f6f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(30, 44, 76, 0.1);
+    margin-bottom: 1rem;
     overflow: hidden;
 }
 
-.product-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #e9ce8a 0%, #9bb1c1 100%);
+.toggle-item summary {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
 }
 
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 35px rgba(30, 44, 76, 0.2);
+.toggle-item summary::-webkit-details-marker {
+    display: none;
 }
 
-.product-badge {
-    display: inline-block;
-    background: #e9ce8a;
-    color: #1e2c4c;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+.toggle-item summary::after {
+    content: '+';
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.toggle-item[open] summary::after {
+    content: '–';
+}
+
+.toggle-item > *:not(summary) {
+    padding: 0 1.5rem 1rem;
+}
+.plan-table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
     font-size: 0.9rem;
+}
+.plan-table th,
+.plan-table td {
+    border: 1px solid #e9ce8a;
+    padding: 0.75rem;
+    text-align: center;
+}
+.plan-table th {
+    background: #f8f6f0;
+    font-weight: 600;
+}
+.plan-table td:first-child {
+    text-align: left;
     font-weight: 500;
+}
+.plan-table tbody tr:nth-child(even) {
+    background: #faf8f2;
+}
+.plan-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
     margin-bottom: 1rem;
 }
-
-.product-card h3 {
-    color: #1e2c4c;
-    margin-bottom: 1rem;
-}
-
-.product-description {
-    color: #1e2c4c;
-    margin-bottom: 1.5rem;
-    opacity: 0.8;
-}
-
-.product-objective {
-    background: rgba(30, 44, 76, 0.1);
-    padding: 0.8rem;
-    border-radius: 8px;
-    color: #1e2c4c;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.journey-arrow {
-    font-size: 2rem;
-    color: #e9ce8a;
-    font-weight: bold;
-    margin: 0 1rem;
-}
-
-/* Free Content Section */
-.free-content-grid {
+/* Testimonials Section */
+.testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.content-card {
+.testimonial-card {
     background: white;
-    padding: 2.5rem;
-    border-radius: 15px;
+    padding: 2rem;
+    border-radius: 12px;
     box-shadow: 0 6px 25px rgba(30, 44, 76, 0.15);
-    text-align: center;
-    transition: transform 0.3s ease;
-    border: 2px solid transparent;
+    position: relative;
 }
 
-.content-card:hover {
-    transform: translateY(-5px);
-    border-color: #e9ce8a;
-}
-
-.content-icon {
+.testimonial-card::before {
+    content: '“';
+    position: absolute;
+    top: -10px;
+    left: 10px;
     font-size: 3rem;
-    margin-bottom: 1rem;
+    color: #e9ce8a;
 }
 
-.content-card h3 {
-    color: #1e2c4c;
-    margin-bottom: 1rem;
+.testimonial-card::after {
+    content: '”';
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-size: 3rem;
+    color: #e9ce8a;
 }
 
-.content-card p {
+.testimonial-card p {
     color: #1e2c4c;
-    opacity: 0.8;
-    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.testimonial-author {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-style: normal;
 }
 
 /* Values Section */
@@ -761,6 +849,22 @@ h4 {
 .btn-buy { font-family: 'Cormorant Garamond', serif; background: linear-gradient(135deg, #1e2c4c 0%, #9bb1c1 100%); color: #fff; text-decoration: none; padding: 15px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: 600; transition: all 0.3s ease; display: inline-block; border: none; cursor: pointer; }
 .btn-buy:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(30, 44, 76, 0.4); }
 
+.btn-buy.highlight {
+    background: linear-gradient(135deg, #e9ce8a 0%, #9bb1c1 100%);
+    color: #1e2c4c;
+}
+
+
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: left;
+}
+.feature-list li {
+    margin-bottom: 0.3rem;
+}
+
 .product-card.clickable { cursor: pointer; }
 
 /* Estilo para o botão da comunidade na navegação */
@@ -813,16 +917,7 @@ h4 {
         flex-direction: column;
         align-items: center;
     }
-    
-    .products-journey {
-        flex-direction: column;
-    }
-    
-    .journey-arrow {
-        transform: rotate(90deg);
-        margin: 1rem 0;
-    }
-    
+
     .cta-buttons {
         flex-direction: column;
     }
@@ -857,7 +952,6 @@ h4 {
     
     .founder-section,
     .info-card,
-    .content-card,
     .contact-info,
     .contact-cta {
         padding: 1.5rem;
