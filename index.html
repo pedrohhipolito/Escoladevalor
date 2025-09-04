@@ -487,15 +487,6 @@
     <script src="app.js"></script>
     <!-- === SCRIPT PARA CONTROLAR OS MODAIS === -->
     <script>
-        // Função para scroll suave (caso não esteja no seu app.js principal)
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        // Lógica dos Modais
         document.addEventListener('DOMContentLoaded', () => {
             // Função genérica para controlar um modal
             const setupModal = (modalId, openBtnId, closeBtnId) => {
