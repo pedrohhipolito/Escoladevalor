@@ -411,12 +411,26 @@ h4 {
     font-size: 0.9rem;
     opacity: 0.8;
 }
-.features-list {
-    list-style: disc;
-    padding-left: 1.5rem;
-    margin-top: 1rem;
-    line-height: 1.6;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
+
+.feature-card {
+    background: #f8f6f0;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(30, 44, 76, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
 .feature-note {
     margin-top: 1rem;
     font-size: 0.9rem;
@@ -452,122 +466,6 @@ h4 {
     justify-content: center;
     margin-bottom: 1rem;
 }
-.products-journey {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.product-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 6px 25px rgba(30, 44, 76, 0.15);
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.product-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #e9ce8a 0%, #9bb1c1 100%);
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 35px rgba(30, 44, 76, 0.2);
-}
-
-.product-badge {
-    display: inline-block;
-    background: #e9ce8a;
-    color: #1e2c4c;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-
-.product-card h3 {
-    color: #1e2c4c;
-    margin-bottom: 1rem;
-}
-
-.product-description {
-    color: #1e2c4c;
-    margin-bottom: 1.5rem;
-    opacity: 0.8;
-}
-
-.product-objective {
-    background: rgba(30, 44, 76, 0.1);
-    padding: 0.8rem;
-    border-radius: 8px;
-    color: #1e2c4c;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.journey-arrow {
-    font-size: 2rem;
-    color: #e9ce8a;
-    font-weight: bold;
-    margin: 0 1rem;
-}
-
-/* Free Content Section */
-.free-content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.content-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 6px 25px rgba(30, 44, 76, 0.15);
-    text-align: center;
-    transition: transform 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.content-card:hover {
-    transform: translateY(-5px);
-    border-color: #e9ce8a;
-}
-
-.content-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.content-card h3 {
-    color: #1e2c4c;
-    margin-bottom: 1rem;
-}
-
-.content-card p {
-    color: #1e2c4c;
-    opacity: 0.8;
-    margin-bottom: 2rem;
-}
-
 /* Testimonials Section */
 .testimonials-grid {
     display: grid;
@@ -977,16 +875,7 @@ h4 {
         flex-direction: column;
         align-items: center;
     }
-    
-    .products-journey {
-        flex-direction: column;
-    }
-    
-    .journey-arrow {
-        transform: rotate(90deg);
-        margin: 1rem 0;
-    }
-    
+
     .cta-buttons {
         flex-direction: column;
     }
@@ -1021,7 +910,6 @@ h4 {
     
     .founder-section,
     .info-card,
-    .content-card,
     .contact-info,
     .contact-cta {
         padding: 1.5rem;

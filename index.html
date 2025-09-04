@@ -36,8 +36,7 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#inicio" class="nav-link">Início</a></li>
                 <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li><a href="#produtos" class="nav-link">Produtos</a></li>
-                <li><a href="#conteudos" class="nav-link">Conteúdos Gratuitos</a></li>
+                <li><a href="#planos" class="nav-link">Planos</a></li>
                 <li><a href="#valores" class="nav-link">Valores</a></li>
                 <li><a href="#contato" class="nav-link">Contato</a></li>
                 <li class="nav-community"><a href="https://chat.whatsapp.com/FjPGlshFWMRAVnI8M9Fbkz" target="_blank">Comunidade</a></li>
@@ -58,8 +57,8 @@
                     "O dinheiro não é um fim, mas uma ferramenta para prover o que realmente importa"
                 </blockquote>
                 <div class="hero-cta">
-                    <button class="btn-primary" onclick="scrollToSection('produtos')">Conheça Nossos Produtos</button>
-                    <button class="btn-secondary" onclick="scrollToSection('conteudos')">Materiais Gratuitos</button>
+                    <button class="btn-primary" onclick="scrollToSection('planos')">Conheça os Planos</button>
+                    <button class="btn-secondary" onclick="scrollToSection('contato')">Entre em Contato</button>
                 </div>
             </div>
         </div>
@@ -113,12 +112,28 @@
     <section id="oque-tem" class="section features-section">
         <div class="container">
             <h2 class="section-title">O que tem na Escola de Valor</h2>
-            <ul class="features-list">
-                <li><strong>Material Vivo:</strong> 72 aulas em 8 trilhas (Fundamentos, Mentalidade, Proteção, Renda Fixa, Renda Variável, Estratégia, Criptomoedas e Volta Extra).</li>
-                <li><strong>Biblioteca:</strong> Materiais extras (Lista de Livros, Conversor/Planilha de Juros, Como Comprar Melhor pt.1/pt.2).</li>
-                <li><strong>Ferramentas EV:</strong> Calculadora de Parcelamento, Conversor de Taxas, Planilha Bola de Neve, Rebalanceador de Carteira, Calculadora de Juros Reais, Comprar ou Alugar Carro, Guia de Investimentos, Templates & Planilhas.</li>
-                <li><strong>Copiloto EV (IA educacional):</strong> resumos, checklists, passo a passo nas ferramentas.</li>
-            </ul>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Material Vivo</h3>
+                    <p>72 aulas em 8 trilhas: Fundamentos, Mentalidade, Proteção, Renda Fixa, Renda Variável, Estratégia, Criptomoedas e Volta Extra.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Biblioteca</h3>
+                    <p>Lista de livros, conversor/planilha de juros e Como Comprar Melhor (pt.1 e pt.2).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Ferramentas EV</h3>
+                    <p>Calculadora de Parcelamento, Conversor de Taxas, Planilha Bola de Neve, Rebalanceador de Carteira, Calculadora de Juros Reais, Comprar ou Alugar Carro, Guia de Investimentos, Templates & Planilhas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Copiloto EV</h3>
+                    <p>Resumos, checklists e passo a passo nas ferramentas.</p>
+                </div>
+            </div>
             <p class="feature-note">Conteúdo educacional. Não é recomendação de investimento.</p>
         </div>
     </section>
@@ -127,7 +142,6 @@
     <section id="planos" class="section plans-section">
         <div class="container">
             <h2 class="section-title">Trilha de Acesso Completo</h2>
-            <p class="section-subtitle">Dinheiro a serviço do que importa.<br>Entre hoje por R$ 9,90 no primeiro mês, avance com o Anual (R$ 399) ou torne-se Fundador Vitalício (R$ 997) com onboarding 1:1 e acesso antecipado às ferramentas.</p>
             <p class="plans-opening"><strong>Abertura de vagas em 03/09.</strong></p>
             <div class="plans-grid">
                 <div class="plan-card">
@@ -233,69 +247,6 @@
         </div>
     </section>
 
-    <!-- Produtos Section -->
-    <section id="produtos" class="section products-section">
-        <div class="container">
-            <h2 class="section-title">Jornada de Produtos</h2>
-            <p class="section-subtitle">Sua evolução na educação financeira.</p>
-            <div class="products-journey">
-                <div class="product-card clickable" data-level="iniciante" id="open-curso-expresso">
-                    <div class="product-badge">Iniciante</div>
-                    <h3>Curso Expresso</h3>
-                    <p class="product-description">Curso básico introdutório para quem está começando na jornada da educação financeira</p>
-                    <div class="product-objective">Fundamentos essenciais</div>
-                </div>
-                <div class="journey-arrow">→</div>
-                <div class="product-card clickable" data-level="intermediario" id="open-acesso-total">
-                    <div class="product-badge">Intermediário</div>
-                    <h3>Acesso Total</h3>
-                    <p class="product-description">Plataforma completa de educação financeira com conteúdo abrangente e estruturado</p>
-                    <div class="product-objective">Conhecimento completo</div>
-                </div>
-                <div class="journey-arrow">→</div>
-                <div class="product-card clickable" data-level="avancado" id="open-mentoria">
-                    <div class="product-badge">Avançado</div>
-                    <h3>Mentoria Financeira EV</h3>
-                    <p class="product-description">Acompanhamento individual para aplicar o método com direção</p>
-                    <div class="product-objective">Mentoria especializada</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Conteúdos Gratuitos Section -->
-    <section id="conteudos" class="section free-content-section">
-        <div class="container">
-            <h2 class="section-title">Conteúdos Gratuitos</h2>
-            <p class="section-subtitle">Comece sua jornada agora mesmo</p>
-            <div class="free-content-grid">
-                <div class="content-card">
-                    <div class="content-icon">📖</div>
-                    <h3>Ebook: Guia Básico de Investimentos</h3>
-                    <p>Fundamentos essenciais para começar a investir com segurança</p>
-                    <a class="btn-download btn-whatsapp" href="https://wa.me/553131912263?text=Quero%20o%20meu%20Guia%20B%C3%A1sico%20Financeiro%20!" target="_blank">Baixar no WhatsApp</a>
-                </div>
-                <div class="content-card">
-                    <div class="content-icon">💡</div>
-                    <h3>Ebook: 10 Sacadas para mudar sua vida financeira</h3>
-                    <p>Dicas práticas para transformar sua relação com o dinheiro</p>
-                    <a class="btn-download btn-whatsapp" href="https://wa.me/553131912263?text=Quero%20receber%20o%20Ebook%2010%20Sacadas%20para%20Mudar%20minha%20Vida%20Financeira!" target="_blank">Baixar no WhatsApp</a>
-                </div>
-                <div class="content-card">
-                    <div class="content-icon">📊</div>
-                    <h3>Ferramentas Financeiras</h3>
-                    <p>
-                        Calculadora de Parcelamento (Pagar a vista ou parcelado)<br>
-                        Conversor de Taxas (diário, Anual, Mensal)<br>
-                        Planilha Bola de Neve (projeção de patrimônio e renda passiva)
-                    </p>
-                    <a class="btn-download btn-whatsapp" href="https://api.whatsapp.com/send/?phone=553131912263&text=Quero+as+Ferramentas+Financeiras+da+Escola+de+Valor%21&type=phone_number&app_absent=0" target="_blank">
-                      Acessar Ferramentas
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Depoimentos Section -->
     <section id="depoimentos" class="section testimonials-section">
@@ -358,8 +309,7 @@
                     <h3>Comece Agora</h3>
                     <p>Escolha como deseja iniciar sua jornada:</p>
                     <div class="cta-buttons">
-                        <button class="btn-primary" onclick="scrollToSection('conteudos')">Materiais Gratuitos</button>
-                        <button class="btn-secondary" onclick="scrollToSection('produtos')">Conhecer Produtos</button>
+                        <button class="btn-primary" onclick="scrollToSection('planos')">Conhecer Planos</button>
                     </div>
                 </div>
             </div>
@@ -378,8 +328,7 @@
                 <div class="footer-links">
                     <a href="#inicio">Início</a>
                     <a href="#sobre">Sobre</a>
-                    <a href="#produtos">Produtos</a>
-                    <a href="#conteudos">Conteúdos Gratuitos</a>
+                    <a href="#planos">Planos</a>
                     <a href="#valores">Valores</a>
                     <a href="#contato">Contato</a>
                 </div>
