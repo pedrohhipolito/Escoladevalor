@@ -820,6 +820,7 @@ h4 {
 }
 .feature-list li {
     margin-bottom: 0.3rem;
+
 }
 
 .product-card.clickable { cursor: pointer; }
