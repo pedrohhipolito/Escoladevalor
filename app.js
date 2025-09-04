@@ -80,7 +80,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Initialize animations on scroll
 function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.product-card, .content-card, .value-card, .info-card');
+    const animatedElements = document.querySelectorAll('.feature-card, .value-card, .info-card, .testimonial-card, .plan-card');
     
     animatedElements.forEach(element => {
         element.style.opacity = '0';
@@ -128,21 +128,6 @@ function initDownloadButtons() {
       }
     });
   });
-}
-
-// Product card hover effects
-function initProductCardEffects() {
-    const productCards = document.querySelectorAll('.product-card');
-    
-    productCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
 }
 
 // Notification system
@@ -207,54 +192,13 @@ function initSmoothScrolling() {
 // Contact form simulation
 function initContactInteractions() {
     const contactButtons = document.querySelectorAll('.contact-cta .btn-primary, .contact-cta .btn-secondary');
-    
+
     contactButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const action = this.textContent.includes('Gratuitos') ? 'materiais gratuitos' : 'produtos';
+            const action = this.textContent.includes('Planos') ? 'planos' : 'contato';
             showNotification(`Redirecionando para ${action}...`, 'info');
         });
     });
-}
-
-// Product journey animation
-function initProductJourneyAnimation() {
-    const journeyCards = document.querySelectorAll('.product-card');
-    const arrows = document.querySelectorAll('.journey-arrow');
-    
-    // Stagger animation for product cards
-    journeyCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(50px)';
-        card.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
-    });
-    
-    arrows.forEach((arrow, index) => {
-        arrow.style.opacity = '0';
-        arrow.style.transform = 'scale(0)';
-        arrow.style.transition = `opacity 0.4s ease ${(index + 1) * 0.3}s, transform 0.4s ease ${(index + 1) * 0.3}s`;
-    });
-    
-    // Trigger animation when products section is in view
-    const productsSection = document.getElementById('produtos');
-    const productObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                journeyCards.forEach(card => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                });
-                
-                arrows.forEach(arrow => {
-                    arrow.style.opacity = '1';
-                    arrow.style.transform = 'scale(1)';
-                });
-                
-                productObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.3 });
-    
-    productObserver.observe(productsSection);
 }
 
 // Values cards stagger animation
@@ -290,11 +234,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initScrollAnimations();
     initDownloadButtons();
-    initProductCardEffects();
     initContactInteractions();
     
     // Animations
-    initProductJourneyAnimation();
     initValuesAnimation();
     
     // Add scroll event listeners with debouncing
