@@ -531,6 +531,7 @@ h4 {
     left: 10px;
     font-size: 3rem;
     color: #9bb1c1;
+
 }
 
 .testimonial-card::after {
@@ -540,6 +541,7 @@ h4 {
     right: 10px;
     font-size: 3rem;
     color: #9bb1c1;
+
 }
 
 .testimonial-card p {
@@ -854,6 +856,7 @@ h4 {
 
 .btn-buy.highlight {
     background: linear-gradient(135deg, #9bb1c1 0%, #9bb1c1 100%);
+
     color: #1e2c4c;
 }
 
@@ -866,6 +869,7 @@ h4 {
 }
 .feature-list li {
     margin-bottom: 0.3rem;
+
 }
 
 .product-card.clickable { cursor: pointer; }
