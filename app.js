@@ -1,21 +1,5 @@
 // DOM Elements
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
-
-// Mobile Navigation Toggle
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on nav links
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
 
 // Smooth scrolling function
 function scrollToSection(sectionId) {
@@ -246,15 +230,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 10);
     
     window.addEventListener('scroll', debouncedScrollHandler);
-    
-    // Add resize event listener for responsive adjustments
-    window.addEventListener('resize', () => {
-        // Close mobile menu on resize
-        if (window.innerWidth > 768) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
     
     // Add loading animation for the page
     document.body.style.opacity = '0';
