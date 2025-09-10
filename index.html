@@ -26,41 +26,30 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
+        <ul class="nav-menu">
+            <li class="nav-logo">
                 <a href="#inicio" class="logo-link">
                     <img src="escola-de-valor-logo.png" alt="Logo Escola de Valor" class="logo-img" onerror="this.style.display='none'">
-                    <h2>Escola de Valor</h2>
                 </a>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#inicio" class="nav-link">Início</a></li>
-                <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li><a href="#planos" class="nav-link">Planos</a></li>
-                <li><a href="#valores" class="nav-link">Valores</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
-                <li class="nav-community"><a href="https://chat.whatsapp.com/FjPGlshFWMRAVnI8M9Fbkz" target="_blank">Comunidade</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
+            </li>
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#planos" class="nav-link">Planos</a></li>
+            <li><a href="#valores" class="nav-link">Valores</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+            <li class="nav-community"><a href="https://chat.whatsapp.com/FjPGlshFWMRAVnI8M9Fbkz" target="_blank">Comunidade</a></li>
+        </ul>
     </nav>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Escola de Valor</h1>
-                <p class="hero-subtitle">Prover perspectiva de prosperidade com determinação, trabalho e fé</p>
-                <blockquote class="hero-manifesto">
-                    "O dinheiro não é um fim, mas uma ferramenta para prover o que realmente importa"
-                </blockquote>
-                <div class="hero-cta">
-                    <button class="btn-primary" onclick="scrollToSection('planos')">Conheça os Planos</button>
-                    <button class="btn-secondary" onclick="scrollToSection('contato')">Entre em Contato</button>
-                </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Escola de Valor</h1>
+            <p class="hero-subtitle">Prover perspectiva de prosperidade com determinação, trabalho e fé</p>
+            <div class="hero-cta">
+                <a class="btn-primary" href="#planos" onclick="scrollToSection('planos'); return false;">Conheça os Planos</a>
+                <a class="btn-secondary" href="#contato" onclick="scrollToSection('contato'); return false;">Entre em Contato</a>
             </div>
+            <img src="deletar.jpg" alt="Ilustração financeira" class="hero-image" onerror="this.style.display='none'">
         </div>
     </section>
 
