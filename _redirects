@@ -1,5 +1,5 @@
 # Arcádia · jardim público (subpath proxy → Vercel)
-# Importante: força trailing slash para Quartz resolver paths relativos certo
-/arcadia          /arcadia/                              301!
-/arcadia/         https://arcadia-ev.vercel.app/         200
+# Ordem importa: regras de proxy ANTES do redirect, pra evitar loop
 /arcadia/*        https://arcadia-ev.vercel.app/:splat   200
+/arcadia/         https://arcadia-ev.vercel.app/         200
+/arcadia          /arcadia/                              301
