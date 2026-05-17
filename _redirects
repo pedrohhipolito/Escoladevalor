@@ -1,0 +1,3 @@
+# Arcádia · jardim público (subpath proxy → Vercel)
+/arcadia          https://arcadia-ev.vercel.app          200
+/arcadia/*        https://arcadia-ev.vercel.app/:splat   200
