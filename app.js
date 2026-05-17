@@ -182,8 +182,12 @@ function showNotification(message, type = 'info') {
 function initSmoothScrolling() {
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            // Só intercepta anchors internas (#sobre, #planos, etc.)
+            // Links externos ou paths (ex.: /arcadia/) seguem navegação normal.
+            if (!href || !href.startsWith('#')) return;
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = href.substring(1);
             scrollToSection(targetId);
         });
     });
