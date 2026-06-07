@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/arcadia",        "destination": "https://arcadia-ev.vercel.app/" },
+    { "source": "/arcadia/",       "destination": "https://arcadia-ev.vercel.app/" },
+    { "source": "/arcadia/:path*", "destination": "https://arcadia-ev.vercel.app/:path*" }
+  ]
+}
